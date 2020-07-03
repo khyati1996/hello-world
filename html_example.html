@@ -1,0 +1,318 @@
+<!-- Tip: For Debugging comment out every line of code one by one to see which line is affecting our result-->
+
+<!DOCTYPE html>
+<html>
+
+<head>   <!--metadata(links) -->
+
+<style>
+.div1{
+color:green !important; 
+font-size:30px;  
+}				
+<!-- when small styling is required we can do it here, else use seperate page for css -->
+<!-- class can be repeated for many elements but for every element id is unique -->
+
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  
+} 
+
+.h{
+text-align: center;
+}
+
+body{
+background-image : url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAAAIVBMVEX+zurOxfr+8dKp/djX+P/+y+z+89Ci/til/dXY/P/NwfqMhWJIAAABBklEQVR4nO3QSQHAIBAEsOUoLfgXjIf59JNISFXkWT3yjsQ3I/u0SFbixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixIkTJ06cOHHixMm/Jxe+NaAavIWvxQAAAABJRU5ErkJggg==");
+background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: cover;
+}
+
+
+table,th,td{
+border: 1px solid black;
+border-collapse:collapse;  /*comment in CSS*/
+padding: 5px;
+}
+
+table{
+border-spacing: 5px;
+}
+tr:nth-child(even){
+background-color:gray;
+}
+tr:nth-child(odd){
+background-color:blue;
+}
+tr:first-child{
+background-color:violet;
+}
+
+ul{
+background-color: gray;
+list-style-type:none;
+line-height:20px;
+padding: 0px;
+margin:0;
+}
+
+li{
+float:right;
+}
+
+li a{
+padding: 0px 10px 0px 10px;
+text-decoration:none;
+font-family:calibri;
+height:30px;
+color:white;
+background-color: #ccc;
+display:block;
+}
+
+li a:hover{
+background-color:#888;
+}
+
+div{
+background-color: violet;
+}
+
+span{
+background-color: violet;
+}
+
+iframe{
+width:500px;
+height:300px;
+align:middle;
+}
+
+</style>
+<!--<meta charset:"UTF-8"/> -->
+</head>
+
+<body>
+
+<h1>MY BLOG</h1>   
+<!--header(h1,h2.....)-->
+
+<ul>
+	<li><a href="#Home">Home</a></li>
+	<li><a href="#Post">Post</a></li>
+	<li><a href="#News">News</a></li>
+	<li><a href="#Contact">Contact</a></li>
+</ul>
+<br/>
+<br/>
+
+
+<form action='' method='get'>
+<b>Username:</b>
+<input list="names" placeholder='username' type='text'/>
+<datalist id="names">
+	<option>Khyati</option>
+	<option>Jia</option>
+	<option>Jiyu</option>
+	<option>Khushbu</option>
+</datalist>
+<b>Location</b>
+<select name='location'>
+	<option>Mumbai</option>
+	<option>Bhopal</option>
+	<option>Pune</option>
+</select>
+<b>Address:</b>
+<textarea placeholder="address(Max characters 50)" rows="3" cols="30" maxlength="50"></textarea>
+<input type="button" value='Surprise' onclick='alert("bazingaa!!!!")'/>
+<input type="submit"/>
+</form>
+
+
+<p>Hello<br>Viola</p> 
+<!----paragraph,br stands for break -->
+<pre> Hello 
+Viola </pre>  
+<!-- paragraph ignores the spaces in the text, pre however prints the exact text , so we need not use break-->
+
+<a href="www.google.com" target="_blank">Google</a>  
+<a href="C:\Users\Iraa Infotech\Desktop\Chegg\WebDesign\html_example1.html" title="Next Page">Second Page</a>
+<!--Link,_blank is new window-->
+
+<img src="C:\Users\Iraa Infotech\Desktop\25th_mummapapa\IMG20200215185702.jpg" alt="cake" width="200px"/>  
+<!-- alt is when image doesnt open-->
+
+<button>Click Me</button>
+
+<div class="div1" style="color:red !important">Hie there</div>  
+<!-- div is used to spoecify the selector for css or any styling(class and id used) -->
+<!-- inline style overpowers the style outside it, but if !important is written in outr styel and nothing in inline(any styling of outside will overpower)-->
+<div class="div1">Hie there</div>
+<div style="font-size:40px">Inline CSS using style</div>
+
+<h5 class = "h" id="myHeader">My Header</h5>
+<h5 class="h">My Header1</h5>
+
+<p title="Peace Quote's">Love For All, Hatred For None.</p>  
+<!--Here in title if i need to use ' , i should enclose it in double quotes-->
+<!-- Title tag is used to give info about the text when we hover over text -->
+
+<span><b class="div1">Welcome</b> to my website</span>
+<!-- <b>(bold),<strong> can be used for bold text-->
+
+<span><em>This is emphasised text</em></span>
+<!-- <em>(emphasised), <i>(italic) is for italic text -->
+
+<mark>Marked Text</mark>
+<small>Small text</small>
+<big>Big Text</big>
+<sub>e=mc</sub>  
+<!--subscript-->
+<sup>2</sup>	 
+<!--superscript-->
+
+<!--table1-->
+
+<table>
+<caption>User Info</caption>
+	<tr>
+		<th>Username</th>
+		<th colspan="2">email</th>
+		<th>Location</th>
+	</tr>
+	
+	<tr>
+		<td>Khyati Oswal</td>
+		<td>jiaheya123@gmail.com</td>
+		<td>jiaheya123@gmail.com</td>
+		<td>Lalitpur</td>
+	</tr>
+	
+	<tr>
+		<td>Aman Oswal</td>
+		<td>amandoodle111@gmail.com</td>
+		<td>amandoodle111@gmail.com</td>
+		<td>Lalitpur</td>
+	</tr>
+</table>
+
+
+<!--ordered and unordered lists-->
+
+<ul>
+	<li>Mumbai</li>
+	<li>Bangalore</li>
+	<li>Delhi</li>
+</ul>
+<br/>
+<ol type="I">
+	<li>Mumbai</li>
+	<li>Bangalore</li>
+	<li>Delhi</li>
+</ol>
+
+<!--description list(dl), description tag(dt), description's description(dd)-->
+<dl>
+	<dt>Paris</dt>
+	<dd>Capital of France</dd>
+	<dt>Bhopal</dt>
+	<dd>Capital of MP</dd>
+</dl>
+
+<!--Multiple lists within-->
+
+<ul>
+	<li>Metro Cities
+		<ul>
+		<li>Mumbai</li>
+		<li>Bangalore</li>
+		<li>Delhi</li>
+		</ul>
+	</li>
+	<li>Holy Cities
+		<ul>
+		<li>Varanasi</li>
+		<li>Haridwar</li>
+		<li>Mathura</li>
+		</ul>
+	</li>
+</ul>
+<br/>
+
+<br/>
+
+<h2 id="Home">Home</h2>
+<p>
+Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. 
+</p>
+
+<h2 id="Post">Posts</h2>
+<p>
+Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc.
+</p>
+
+<h2 id="News">News</h2>
+<p>
+Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc.
+</p>
+
+<h2 id="Contact">Contact</h2>
+<p>
+Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc.
+</p>
+
+
+<!-- difference between div and span : div takes as much as area as possible, while span covers the least area possible -->
+
+<div>Hello</div>
+<div>World</div>
+<br/>
+<span>Hello</span>
+<span>World</span>
+
+<!-- iframes are used to load a webpage within one webpage in a area, normally used to show maps, etc-->
+<iframe src="https://www.youtube.com/embed/watch?v=mmjDZGSr7EA&list=PLqM7alHXFySGbXhWx7sBJEwY2DnhDjmxm"></iframe>
+
+<br/>
+<b><a href="https://www.freeformatter.com/html-entities.html">Important : Symbols for special characters in HTML</a></b>
+
+
+<br/>
+<!--Calculations-->
+<form action="" method="get" oninput="x.value=parseInt(a.value)*parseInt(b.value)"> 
+<input type="number" id="a" name="a" value="32"/>
+<span>*</span>
+<input type="number" id="b" name="b" value="50"/>
+<span>=</span>
+<output name='x' for='a b'> </output>
+
+<br/>
+<input type="email" name="email" placeholder="email"/>
+<input type="password" name="password" placeholder="password"/>
+<b>Hobbies(equal or more than one)</b>
+<input type="checkbox" name="Hobby1"/>Singing
+<input type="checkbox" name="Hobby2"/>Dancing
+<input type="checkbox" name="Hobby3"/>Sketching
+City:
+<input type="radio" name="City"/>Mumbai
+<input type="radio" name="City"/>Lalitpur
+<input type="radio" name="City"/>Indore
+<input type="date" name="dateOfBirth">
+<input type="datetime-local" name="date_time">
+<input type="month"/>
+<input type="range"min="0" max="10" name="point"/>
+<input type="reset"/>
+<input type="submit"/>
+
+</form>
+<br/>
+
+<div>&copy; 2020 JiyuPiyu</div>
+
+
+
+</body>
+</html>
